@@ -1,4 +1,5 @@
-# MsShellcodeDev
+# MsShellcodeDev - Revision 1
+
 The toolset that could help turning C programmers to Shellcode developers.
 
 # Requirements - To Build the Solution
