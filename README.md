@@ -1,17 +1,16 @@
 # MsShellcodeDev - Revision 1
 
-The toolset that could help turning C programmers to Shellcode developers.
+The toolset that could help turning C programmers to Shellcode developers. (Under Updating)
 
 # Requirements - To Build the Solution
-Main part: MsShellcodeDev -- Visual Studio 2026 is the recommended IDE to compile the solution, however, as sln provided, techinically using Visual Studio 2013, 2015, 2017, 2019 & 2022 to build this project is possible, just remember to modify some important settings such as platform toolset and others. Hardware & software requirements are the same as used Visual Studio Version. (For those want to develop offline under a not-so-fat IDE, Visual Studio 2015 might be your best choice.)
-As v140xp and v141xp removed from Visual Studio 2026, project "ShellcodeTestLoader" is no more a part of the main solution.
+Main part: MsShellcodeDev -- Visual Studio 2026 is the recommended IDE to compile the solution, however, as sln provided, techinically using Visual Studio 2017, 2019 & 2022 to build this project is possible, just remember to modify some important settings such as platform toolset and others. Hardware & software requirements are the same as used Visual Studio Version. Since "Revision 1" added means Windows on Arm64 (Apple Silicon, Snapdragon, etc.) is supported, Visual Studio 2015 & older IDE no more support.
 
 (For Demonstration Video: Click on the Image & Download the MP4 to play)
 
 Demonstration Video showing project "VcxprojToShellcodeCompiler" (the core part) & "ShellcodeTestLoader" (the tester) of MsShellcodeDev built using Visual Studio 2026<br />
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/MsShellcodeDev-Built@VS2026.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/MsShellcodeDev-Built@VS2026.mp4)
 
-Additional tool part 1: ShellcodeTestLoader -- To provide both x86 & x64 shellcode loader exe compatible with Windows XP platform, v140xp or v141xp toolsets (though deprecated) should be installed in addtion to the C Desktop Development Core Components. If using Visual Studio 2017, 2019 & 2022, please keep that in mind; if using Visual Studio 2013 & 2015, both IDEs are already XP compatible.
+Additional tool part 1: ShellcodeTestLoader -- To provide x86, x64 & arm64 shellcode loader exe compatible with Windows XP platform, v141xp toolsets (though deprecated) should be installed in addtion to the C Desktop Development Core Components. Beware that Visual Studio 2026 already removed that feature.
 
 Demonstration Video showing project "ShellcodeTestLoader" built using Visual Studio 2022
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ShellcodeTestLoader-Built@VS2022.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ShellcodeTestLoader-Built@VS2022.mp4)
