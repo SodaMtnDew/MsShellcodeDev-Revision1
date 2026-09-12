@@ -21,7 +21,7 @@ Demonstration Video showing project "ShellcodeTestLoader.x86" built using Visual
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ShellcodeTestLoader.x86-Built.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ShellcodeTestLoader.x86-Built@VS2008Express.mp4)
 
 # Requirements - To Build the Shellcode
-To execute "Vcxproj to Shellcode Compiler" to convert & compile the vcxproj to shellcode, Windows 10 & Visual Studio 2017 (or higher version OSes/IDEs) are required, so the Software/Hardwre requirements just same as Win 10 & VS 2017. The converted project should be developed using pure C & win32/win64 APIs without class & global variable definitions, and /"switch/"-/"case/" statement.
+To execute "Vcxproj to Shellcode Compiler" to convert & compile the vcxproj to shellcode, Windows 10 & Visual Studio 2017 (or higher version OSes/IDEs) are required, so the Software/Hardwre requirements just same as Win 10 & VS 2017. The converted project should be developed using pure C & win32/win64 APIs without class & global variable definitions, and "switch" - "case" statement.
 
 Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86 & x64 shellcode files using Visual Studio 2026<br />
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2026.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2026.mp4)
