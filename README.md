@@ -3,16 +3,16 @@
 The toolset that could help turning C programmers to Shellcode developers. (Under Updating)
 
 # Requirements - To Build the Solution
-Main part: MsShellcodeDev -- Visual Studio 2026 is the recommended IDE to compile the solution, however, as sln provided, techinically using Visual Studio 2017, 2019 & 2022 to build this project is possible, just remember to modify some important settings such as platform toolset and others. Hardware & software requirements are the same as used Visual Studio Version. Since "Revision 1" added means Windows on Arm64 (Apple Silicon, Snapdragon, etc.) is supported, Visual Studio 2015 & older IDE no more support.
+Main part: MsShellcodeDev -- Visual Studio 2026 is the recommended IDE to compile the solution, however, as sln provided, techinically using Visual Studio 2017, 2019 & 2022 to build this project is possible, just remember to modify some important settings such as platform toolset and others. Hardware & software requirements are the same as used Visual Studio Version. Since "Revision 1" added means Windows on Arm64 (Apple Silicon, Snapdragon, etc.) is supported, Visual Studio 2015 & older IDEs no more supported.
 
 (For Demonstration Video: Click on the Image & Download the MP4 to play)
 
-Demonstration Video showing project "VcxprojToShellcodeCompiler" (the core part) & "ShellcodeTestLoader" (the tester) of MsShellcodeDev built using Visual Studio 2026<br />
+Demonstration Video showing project "VcxprojToShellcodeCompiler" of MsShellcodeDev built using Visual Studio 2026<br />
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/MsShellcodeDev-Built@VS2026.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/MsShellcodeDev-Built@VS2026.mp4)
 
 Additional tool part 1: ShellcodeTestLoader -- To provide x86, x64 & arm64 shellcode loader exe compatible with Windows XP platform, v141xp toolsets (though deprecated) should be installed in addtion to the C Desktop Development Core Components. Beware that Visual Studio 2026 already removed that feature.
 
-Demonstration Video showing project "ShellcodeTestLoader" built using Visual Studio 2022
+Demonstration Video showing project "ShellcodeTestLoader" built using Visual Studio 2017
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ShellcodeTestLoader-Built@VS2022.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ShellcodeTestLoader-Built@VS2022.mp4)
 
 Additional tool part 2: ShellcodeTestLoader.x86 -- The "ShellcodeTestLoader" has another copy of sln that should be built using Visual Studio 2008 Express with SP1 since windows 2000 compatibility is considered. VS2008 is the last version supporting Windows 2000. Although it's also the first or second version supporting x64, the free "Visual Studio 2008 Express" version did not have a built-in x64 compiler (but not a problem since Windows 2000 did not have x64 version). The compiled ShellcodeTestLoader could be used to load & test x86 shellcode from Windows 2000 to Windows 11 platforms.
@@ -21,7 +21,7 @@ Demonstration Video showing project "ShellcodeTestLoader.x86" built using Visual
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ShellcodeTestLoader.x86-Built.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ShellcodeTestLoader.x86-Built@VS2008Express.mp4)
 
 # Requirements - To Build the Shellcode
-To execute "Vcxproj to Shellcode Compiler" to convert & compile the vcxproj to shellcode, Windows 7 & Visual Studio 2013 (or higher version OSes/IDEs) are required, so the Software/Hardwre requirements just same as Win 7 & VS 2013. The converted project should be developed using pure C & win32/win64 APIs without class & global variable definitions.
+To execute "Vcxproj to Shellcode Compiler" to convert & compile the vcxproj to shellcode, Windows 10 & Visual Studio 2017 (or higher version OSes/IDEs) are required, so the Software/Hardwre requirements just same as Win 10 & VS 2017. The converted project should be developed using pure C & win32/win64 APIs without class & global variable definitions, and /"switch/"-/"case/" statement.
 
 Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86 & x64 shellcode files using Visual Studio 2026<br />
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2026.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2026.mp4)
