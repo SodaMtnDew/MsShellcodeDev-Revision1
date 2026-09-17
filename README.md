@@ -1,6 +1,6 @@
 # MsShellcodeDev - Revision 1
 
-The toolset that could help turning C programmers to Shellcode developers. (Under Updating)
+The toolset that could help turning C programmers to Shellcode developers. (Under Updating)To test all programs of MsShellcodeDev-Revision1, Visual Studio 2026 on Windows 11 Arm64 is recommeded since on WoA, all x86, x64 & arm64 PE files could be executed.
 
 For demonstration video, plesae click on the snapshot image & download the MP4 to play.
 
@@ -57,11 +57,11 @@ For the project to be converted & compiled, developers could type the codes & de
 4. Compatible with most OS Architecture & versions: from Windows 2000 to Windows 11 ARM64 version.
 
 # PoC Provided
-PoC Part 0: The start of this project -- My patched poison ivy RAT executed on windows 11 & C2 on Windows Server 2025. The recersing experiences soon became my motivation craeted this projects.
+PoC Part 0: The start of this project -- My patched poison ivy RAT executed on windows 11 & C2 on Windows Server 2025. The reversing experience soon became my motivation to create this projects.
 
-PoC Part 1: GetSysInfo, as Part of MsShellcodeDev Soluion - ShellcodeSample.vcxproj. (Tricks detecting OS Arch used, please dig deeper into source codes of this projects)
+PoC Part 1: GetSysInfo, as Part of MsShellcodeDev Soluion - ShellcodeSample.vcxproj. (Tricks detecting OS Real Version & Arch used, please take a deeper look into source codes of this projects.)
 
-PoC Part 2: Poc_Reconnaissance -- The "ReconCommand" is the C2 that received SysInfo (including icon images) sent from targets, Please use "VcxprojToShellcodeCompiler" to compile "ReconAgent" as all x86, x64 & arm64 versions of shellcode (Remember to modify the C2 host name in source code). If "ReconCommand.ini" not provided or "ListenPort" not set, the default is 8080.
+PoC Part 2: Poc_Reconnaissance -- Evolved from "GetSysInfo" POC, the "ReconCommand" is the C2 that received data sent from targets, after use "VcxprojToShellcodeCompiler" to compile "ReconAgent" in both x86 & x64 shellcode format, the agents not just sending back SysInfo but also ICON images (as PNG format) of assigned file format. (Remember to modify the C2 host name in source code of agent, and, the tricks of using gdiplus FLat API used without C++ Wrapper to get PNGs of ICON could be learned here). If the config of CA "ReconCommand.ini" not provided or "ListenPort" not set, the default value is 8080.
 
 PoC Part 3: Poc_Licensing@USB -- Shellcode could also be used for non-malicious purpose, and this is one example. In Poc_Licensing@USB, "GenerateLicenseAtUSB" could generate file "License.ini" and save it in the root directory of the selected thumb drive. The key in the License file is generated using HMAC_SHA512 (Key length=128 bytes, 2nd half is generated using SHA512 output of iSerialNumber of "that" thumb drive) and Username given in the same license file. Use generated "CheckLicense" shellcose could test if the license valid. Since iSerialNumber is the key factor, the License.ini generated & tested valid on thumb drive 1 will not be valid if just copied to thumb drive 2 (only x64 version tested).
 
@@ -74,5 +74,5 @@ P.S. For C2 in PoC, Remember to Set Firewall Rules for C2 Host ...
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/GetSysInfo@Windows.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GetSysInfo@Windows.mp4)
 3. Building PoC_Reconnaissance, Compiling ReconAgent as Shellcode & Executing It on Windows XP, Windows 7, Windows 10 CMGE, Windows 11 26H1 zhTW & Windows 11 26H1 enUS, With Different Office Version & PDF Viewer Installed (No Windows @ Arm64 Video because of my laziness.)<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ReconAgents2ReconCommand.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ReconAgents2ReconCommand.mp4)
-5. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode & Executing It on Windows 11 26H1 enUS, With Same License.ini File on Different USB Thumbdrive<br />
+4. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode & Executing It on Windows 11 26H1 enUS, With Same License.ini File on Different USB Thumbdrive<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/CheckLicense@USB.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/CheckLicense@USB.mp4)
