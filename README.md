@@ -30,11 +30,17 @@ Demonstration Video showing project "ShellcodeTestLoader.x86" built using Visual
 # Requirements - To Build the Shellcode
 To execute "Vcxproj to Shellcode Compiler" to convert & compile the vcxproj to shellcode, Windows 10 & Visual Studio 2019 (or higher version OSes/IDEs) are required, so the Software/Hardwre requirements just same as Win 10 & VS 2019. The converted project should be developed using pure C & win32/win64 APIs without class & global variable definitions, and "switch" - "case" statement.
 
-Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86 & x64 shellcode files using Visual Studio 2026<br />
-[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2026.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2026.mp4)
+Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86 & x64 shellcode files using Visual Studio 2026 @ ARM64<br />
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2026ARM64.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2026ARM64.mp4)
 
-Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86 & x64 shellcode files using Visual Studio 2022<br />
-[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2022.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2022.mp4)
+Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86 & x64 shellcode files using Visual Studio 2022 @ ARM64<br />
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2022ARM64.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2022ARM64.mp4)
+
+Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86 & x64 shellcode files using Visual Studio 2026 @ x64<br />
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2026x64.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2026x64.mp4)
+
+Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86 & x64 shellcode files using Visual Studio 2022 @ x64<br />
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2022x64.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2022x64.mp4)
 
 Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86 & x64 shellcode files using Visual Studio 2019<br />
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2019.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2019.mp4)
@@ -48,15 +54,16 @@ For the project to be converted & compiled, developers could type the codes & de
 1. Auto Converting, Compiling & Extracting: No need to assign string variable as local char array manually; using dword to save local array variables could help preventing SIMD instruction extension from being used (in the case, array data will be put into data section); no need to calculate api hashes for converter will do it for you.
 2. Supporting Getting API by Ordinal: Some undocumented APIs were provided very early (NT 5.0 or even 4.0) but in older version of DLLs, exported by ordinal (Those ordinals are unchanged bacause of backward compatibility). If want to develop the shellcode compitible for all NT-based platform, try to find those APIs & use them well (You could Google "Geoff Chappel" for the references he provided)
 3. Supporting API Forwarding: Using "dumpbin /exports" on DLLs of different versions of Windows, API forwarding could be easily found on many legacy API/DLL pairs. For those using import table in EXE or using "GetProcAddress" API to get function address, that's not a problem; for those enumerating export table from DLLs to find function name hash that match given value to get API address, it will cause error. MsShellcodeDev could detect if API forwarding happened in loaded DLL and get the real function address from the forwarded DLL. (FYI, even in kernel32.dll & user32.dll, those frequently used dll, API forwarding was implemented on Windows 11 25H2, & I'm not trying other versions) Using "ShellcodeSample" of "MsShellcodeDev," since the source code included APIs from netapi32.dll that forwarded to other DLLs & APIs from shlwapi.dll that exported using ordinals, Feature 2 & 3 could be tested using one sample.
+4. Compatible with most OS Architecture & versions: from Windows 2000 to Windows 11 ARM64 version.
 
 # PoC Provided
-PoC Part 0: The start of this project -- My patched poison ivy RAT executed on windows 11 & C2 on Windows Server 2025.
+PoC Part 0: The start of this project -- My patched poison ivy RAT executed on windows 11 & C2 on Windows Server 2025. The recersing experiences soon became my motivation craeted this projects.
 
-PoC Part 1: GetSysInfo, as Part of MsShellcodeDev Soluion - ShellcodeSample.vcxproj.
+PoC Part 1: GetSysInfo, as Part of MsShellcodeDev Soluion - ShellcodeSample.vcxproj. (Tricks detecting OS Arch used, please dig deeper into source codes of this projects)
 
-PoC Part 2: Poc_Reconnaissance -- The "ReconCommand" is the C2 that received SysInfo (including icon images) sent from targets, Please use "VcxprojToShellcodeCompiler" to compile "ReconAgent" as both x86/x64 versions of shellcode (Remember to modify the C2 host name in source code). If "ReconCommand.ini" not provided or "ListenPort" not set, the default is 8080.
+PoC Part 2: Poc_Reconnaissance -- The "ReconCommand" is the C2 that received SysInfo (including icon images) sent from targets, Please use "VcxprojToShellcodeCompiler" to compile "ReconAgent" as all x86, x64 & arm64 versions of shellcode (Remember to modify the C2 host name in source code). If "ReconCommand.ini" not provided or "ListenPort" not set, the default is 8080.
 
-PoC Part 3: Poc_Licensing@USB -- Shellcode could also be used for non-malicious purpose, and this is one example. In Poc_Licensing@USB, "GenerateLicenseAtUSB" could generate file "License.ini" and save it in the root directory of the selected thumb drive. The key in the License file is generated using HMAC_SHA512 (Key length=128 bytes, 2nd half is generated using SHA512 output of iSerialNumber of "that" thumb drive) and Username given in the same license file. Use generated "CheckLicense" shellcose could test if the license valid. Since iSerialNumber is the key factor, the License.ini generated & tested valid on thumb drive 1 will not be valid if just copied to thumb drive 2.
+PoC Part 3: Poc_Licensing@USB -- Shellcode could also be used for non-malicious purpose, and this is one example. In Poc_Licensing@USB, "GenerateLicenseAtUSB" could generate file "License.ini" and save it in the root directory of the selected thumb drive. The key in the License file is generated using HMAC_SHA512 (Key length=128 bytes, 2nd half is generated using SHA512 output of iSerialNumber of "that" thumb drive) and Username given in the same license file. Use generated "CheckLicense" shellcose could test if the license valid. Since iSerialNumber is the key factor, the License.ini generated & tested valid on thumb drive 1 will not be valid if just copied to thumb drive 2 (only x64 version tested).
 
 P.S. For C2 in PoC, Remember to Set Firewall Rules for C2 Host ...
 
