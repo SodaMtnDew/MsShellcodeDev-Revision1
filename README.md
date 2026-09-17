@@ -70,9 +70,9 @@ P.S. For C2 in PoC, Remember to Set Firewall Rules for C2 Host ...
 # List of Demonstration
 1. Executing Patched Poison Ivy 2.3.2 Shellcode on Windows 11 26H1, C2 Listening on Port 3460 at Windows Server 2025 Standard Version, Just to Mention How MsShellcodeDev Emerged as an Open Source Project (From What I Learned in Patching Poison Ivy RAT)<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/PatchedPI232@Win11.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/PatchedPI232@Win11.mp4)
-2. Compiling ShellcodeSample, Output as GetSysInfo & Executing all x86/x64/arm64 Versions on Windows 2000 Professional, Windows XP, etc. (Including Windows 11)<br />
+2. Compiling ShellcodeSample, Output as GetSysInfo & Executing all x86/x64/arm64 Versions on Windows 2000 Professional, Windows XP, etc. (Including Windows 11 on both x86 & arm64)<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/GetSysInfo@Windows.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GetSysInfo@Windows.mp4)
-3. Building PoC_Reconnaissance, Compiling ReconAgent as Shellcode & Executing It on Windows XP, Windows 7, Windows 10 CMGE, Windows 11 26H1 zhTW & Windows 11 26H1 enUS, With Different Office Version & PDF Viewer Installed<br />
+3. Building PoC_Reconnaissance, Compiling ReconAgent as Shellcode & Executing It on Windows XP, Windows 7, Windows 10 CMGE, Windows 11 26H1 zhTW & Windows 11 26H1 enUS, With Different Office Version & PDF Viewer Installed (No Windows @ Arm64 Video because of my laziness.)<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ReconAgents2ReconCommand.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ReconAgents2ReconCommand.mp4)
-4. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode & Executing It on Windows 11 26H1 enUS, With Same License.ini File on Different USB Thumbdrive<br />
+5. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode & Executing It on Windows 11 26H1 enUS, With Same License.ini File on Different USB Thumbdrive<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/CheckLicense@USB.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/CheckLicense@USB.mp4)
