@@ -7,6 +7,8 @@ For demonstration video, plesae click on the snapshot image & download the MP4 t
 # Requirements - To Build the Solution
 Main part: MsShellcodeDev -- Visual Studio 2026 is the recommended IDE to compile the solution, however, for those still prefer old MS IDEs such as Visual Studio 2019 & 2022, sln also provided for those IDEs, just remember to modify project settings such as platform toolset & SDK version provided by your IDE. However, since "Revision 1" already provided ARM64 (Apple Silicon, Snapdragon, etc.) supporting, Visual Studio 2015 & older IDEs no more supported. Addition info also provided, VS2017 was officially supported ARM64 after 17.5.8, but the SDK installed with it not might cause some unpredicted error messages, since both "ShellcodePrototype" & "ShellcodeSample" projects having ARM64 Release config for testing & referencing purpose, for compatibility consideration, VS2017 is not recommended.
 
+For those having legitimate license of any of those IDEs mentioned, I recommended not installing the community version because people prefer to develop "shellcode" offline; for those having no license, using community version has no problem, I guess most of you know how to protect your source codes & PE files built.
+
 Demonstration Video showing the building & execution of all projects of MsShellcodeDev-Rev1 using Visual Studio 2026 on Windows 11 as Guest OS of VMware Fusion on MacBoook Air ("ShellcodePrototype" & "ShellcodeSample" included)<br />
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/MsShellcodeDev-Built@VS2026.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/MsShellcodeDev-Built@VS2026.mp4)
 
@@ -14,17 +16,17 @@ Additional tool
 
 ShellcodeTestLoader -- To provide x86, x64 & arm64 shellcode loader exe to help testing if generated shellcode files worked. Beware that when doing the test, both test loader & shellcode files are not obfuscated so not FUD, so please turn off antivirus software & smartapp functions. And, after "Revision 1" added, loader for arm64, x64 & x86 will be in different projects for better version control.
 
-Part 1: ShellcodeTestLoader.ARM64 -- The "ShellcodeTestLoader.ARM64" could only be built using Visual Studio 2019 or newer IDEs, the reasons already mentioned. 
+Part 1: ShellcodeTestLoader.ARM64 -- The "ShellcodeTestLoader.ARM64" could only be built using Visual Studio 2019 or newer IDEs, since no XP or lower version OS compatibility consideration, and using v141 platform toolset will lead to linking error beacuse of SDK imcompatibility. 
 
 Demonstration Video showing project "ShellcodeTestLoader.ARM64" built using Visual Studio 2019
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ShellcodeTestLoader.ARM64-Built@VS2019.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ShellcodeTestLoader.ARM64-Built@VS2019.mp4)
 
-Part 2: ShellcodeTestLoader.x64 -- The "ShellcodeTestLoader.x64" sould be built with v140xp (though Unsupported) or v141xp toolsets (though deprecated) since Windows XP & Server 2003 already provided x64 version, when installling the MS IDEs, be careful to install the toolsets as individual components so the generated shellcode could use the loader to test. Beware that Visual Studio 2026 and  Visual Studio 2022 on Arm64 already removed that feature.
+Part 2: ShellcodeTestLoader.x64 -- The "ShellcodeTestLoader.x64" should be built with v140xp (though Unsupported now) or v141xp toolsets (though deprecated) since Windows XP & Server 2003 already provided x64 version, when installling the MS IDEs, be careful to install the toolsets as individual components so the generated shellcode could use the loader to test. Beware that Visual Studio 2026 and Visual Studio 2022 on Arm64 already removed that feature, so remember to keep your copy of Visual Studio 2015 iso images well since no one knows when they will be unavailbale. (Visual Studio 2017 could only be installed online so we have no way to save it as a "small" enough iso image)
 
 Demonstration Video showing project "ShellcodeTestLoader.x64" built using Visual Studio 2017
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ShellcodeTestLoader-Built@VS2017.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ShellcodeTestLoader-Built@VS2017.mp4)
 
-Part 3: ShellcodeTestLoader.x86 -- The "ShellcodeTestLoader.x86" should be built using Visual Studio 2008 Express with SP1 since windows 2000 compatibility is considered. VS2008 is the last version supporting Windows 2000. Although it's also the first or second version supporting x64, the free "Visual Studio 2008 Express" version did not have a built-in x64 compiler (but not a problem since Windows 2000 did not have x64 version, the only problem is to download & keep your copy of Visual Studio 2008 Express well since no one knows when it will be unavailbale ).
+Part 3: ShellcodeTestLoader.x86 -- The "ShellcodeTestLoader.x86" should be built using Visual Studio 2008 Express with SP1 since windows 2000 compatibility is considered. VS2008 is the last version supporting Windows 2000. Although it's also the first or second version supporting x64, the free "Visual Studio 2008 Express" version did not have a built-in x64 compiler (but not a problem since Windows 2000 did not have x64 version). Beware to keep your copy of Visual Studio 2008 iso images well since no one knows when they will be unavailbale.
 
 Demonstration Video showing project "ShellcodeTestLoader.x86" built using Visual Studio 2008 Express<br />
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ShellcodeTestLoader.x86-Built@VS2008Express.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ShellcodeTestLoader.x86-Built@VS2008Express.mp4)
