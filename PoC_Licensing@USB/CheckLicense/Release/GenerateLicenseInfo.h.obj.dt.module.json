@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Release\\GenerateLicenseInfo.obj",
+            "outputs": [
+                "Release\\GenerateLicenseInfo.h.obj.dt.module.json",
+                "Release\\GenerateLicenseInfo.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

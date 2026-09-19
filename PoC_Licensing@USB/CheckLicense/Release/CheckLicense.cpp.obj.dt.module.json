@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Release\\CheckLicense.obj",
+            "outputs": [
+                "Release\\CheckLicense.cpp.obj.dt.module.json",
+                "Release\\CheckLicense.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
