@@ -1,0 +1,28 @@
+<Solution>
+  <Configurations>
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="VcxprojToShellcodeCompiler/VcxprojToShellcodeCompiler.vcxproj" Id="9bd584ee-4bd0-493a-a3dc-bc6e5d5fd4b4" DefaultStartup="true">
+    <Platform Solution="*|ARM64" Project="Win32" />
+	<Platform Solution="*|x64" Project="Win32" />
+    <Build Solution="*|ARM64" Project="false" />
+    <Build Solution="*|x64" Project="false" />
+  </Project>
+  <Project Path="HashOfFuncAndLibNameCalculator/HashOfFuncAndLibNameCalculator.vcxproj" Id="31ce12ed-7a50-40f0-a3f5-4aebcc85bd29">
+    <Platform Solution="*|ARM64" Project="Win32" />
+	<Platform Solution="*|x64" Project="Win32" />
+    <Build Solution="*|ARM64" Project="false" />
+    <Build Solution="*|x64" Project="false" />
+  </Project>
+  <Project Path="ShellcodePrototype/ShellcodePrototype.vcxproj" Id="e6b7a8d0-299b-4448-b0cc-0425e847d5b9">
+    <BuildType Project="Release" />
+    <Build Solution="Debug|x64" Project="false" />
+    <Build Solution="Debug|x86" Project="false" />
+    <Build Solution="Debug|ARM64" Project="false" />
+  </Project>
+  <Project Path="ShellcodeSample/ShellcodeSample.vcxproj" Id="3e3e4210-add5-4c73-aa95-9dbaf3cc75a7" />
+    <BuildType Project="Release" />
+    <Build Solution="Debug|*" Project="false" />
+</Solution>
