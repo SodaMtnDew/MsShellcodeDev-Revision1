@@ -62,7 +62,7 @@ For the project to be converted & compiled, developers could type the codes & de
 4. Compatible with most OS Architecture & versions: from Windows 2000 to Windows 11 @ ARM64.
 
 # PoC Provided
-PoC Part 0: The start of this project -- My patched poison ivy RAT executed on windows 11 & C2 on Windows Server 2025. The reversing experience soon became my motivation to create this projects (beware no source code will be provided of this PoC for preventing any kind of lawsuits.
+PoC Part 0: The start of this project -- My patched poison ivy RAT executed on windows 11 & C2 on Windows Server 2025. The reversing experience soon became my motivation to create this projects (beware no source code available of this PoC for preventing any kind of lawsuits). 
 
 PoC Part 1: GetSysInfo, as Part of MsShellcodeDev Soluion - ShellcodeSample.vcxproj. (Tricks detecting OS Real Version & Arch used, please take a deeper look into source codes of this projects.)
 
@@ -73,11 +73,11 @@ PoC Part 3: Poc_Licensing@USB -- Shellcode could also be used for non-malicious 
 P.S. For C2 in PoC, Remember to Set Firewall Rules for C2 Host ...
 
 # List of Demonstration
-1. Executing Patched Poison Ivy 2.3.2 Shellcode on Windows 11 26H1, C2 Listening on Port 3460 at Windows Server 2025 Standard Version, Just to Mention How MsShellcodeDev Emerged as an Open Source Project (From What I Learned in Patching Poison Ivy RAT)<br />
+1. Executing Patched Poison Ivy 2.3.2 Shellcode on Windows 11 26H2@Arm64, C2 Listening on Port 3460 at Windows Server 2025 Standard Version, Just to Mention How MsShellcodeDev-Rev1 Emerged as an Open Source Project (From What I Learned in Patching Poison Ivy RAT)<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/PatchedPI232@Win11.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/PatchedPI232@Win11.mp4)
-2. Compiling ShellcodeSample, Output as GetSysInfo & Executing all x86/x64/arm64 Versions on Windows 11/10/7/XP/2000<br />
+2. Executing GetSysInfo (Compiled from ShellcodeSample of main solution) all versions - x86/x64/arm64 - on Windows 11/10/7/XP/2000 & Windows Server, including Domain Center<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/GetSysInfo@Windows.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GetSysInfo@Windows.mp4)
-3. Building PoC_Reconnaissance, Compiling ReconAgent as Shellcode & Executing It on Windows XP, Windows 7, Windows 10 CMGE, Windows 11 26H1 zhTW & Windows 11 26H1 enUS, With Different Office Version & PDF Viewer Installed (No Windows @ Arm64 Video because of I am lazy in doing so.)<br />
+3. Building PoC_Reconnaissance, Compiling ReconAgent as Shellcode & Executing It on Windows XP, Windows 7, Windows 10 CMGE, Windows 11 26H1 zhTW, Windows 11 26H1 enUS, & Windows 11 26H1@Arm64, with different office version & PDF viewers installed.<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ReconAgents2ReconCommand.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ReconAgents2ReconCommand.mp4)
-4. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode & Executing It on Windows 11 26H1 enUS, With Same License.ini File on Different USB Thumbdrive<br />
+4. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode & Executing It on Windows 11 26H2@Arm64, showing that License.ini & USB thumb drive should be paired to make the license valid.<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/CheckLicense@USB.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/CheckLicense@USB.mp4)
