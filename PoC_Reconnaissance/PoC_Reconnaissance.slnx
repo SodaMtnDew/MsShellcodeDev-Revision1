@@ -1,8 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="ReconAgent/ReconAgent.vcxproj" Id="b6d7a9e9-dd77-4277-854e-6387e5260aaf" />
-  <Project Path="ReconCommand/ReconCommand.vcxproj" Id="e93a8288-4c88-4871-9101-a1693e699457" />
-</Solution>
