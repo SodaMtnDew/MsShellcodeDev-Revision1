@@ -1,6 +1,6 @@
 # MsShellcodeDev - Revision 1
 
-The tools that could help turning C programmers to Shellcode developers. (Under Updating)To testing all programs of MsShellcodeDev-Revision1, Visual Studio 2026 on Windows 11 Arm64 is recommeded since on WoA, all x86, x64 & arm64 PE files could be executed. For testing all generated shellcode files & the compatibilities on all nt-based windows, please use VMware Workstation on Windows/Linux Platform & VMware Fusion on macOS & install all needed guest OS to test. The demonstration video files in this repository are all recorded as VMware guest OS.
+The tools that could help turning C programmers to Shellcode developers. To testing all programs of MsShellcodeDev-Revision1, Visual Studio 2026 on Windows 11 Arm64 is recommeded since on WoA, all x86, x64 & arm64 PE files could be executed. For testing all generated shellcode files & the compatibilities on all nt-based windows, please use VMware Workstation on Windows/Linux Platform & VMware Fusion on macOS & install all needed guest OS to test. The demonstration video files in this repository are all recorded as VMware guest OS.
 
 For demonstration video, plesae click on the snapshot image & download the MP4 to play.
 
