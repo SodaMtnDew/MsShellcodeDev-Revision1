@@ -33,6 +33,7 @@ Demonstration Video showing project "ShellcodeTestLoader.x86" built using Visual
 
 # Requirements - To Build the Shellcode
 To execute "Vcxproj to Shellcode Compiler" to convert & compile the vcxproj to shellcode, Windows 10 & Visual Studio 2019 (or higher version OSes/IDEs) are required, so the Software/Hardwre requirements just same as Win 10 & VS 2019. The converted project should be developed using pure C & win32/win64 APIs without class & global variable definitions. And for new finding, and switch/case statement will also generate position dependent code so could not be used.
+For those advanced developers familiar with using intrinsic functions (since __stosb, __movsb, etc. are more efficient than memset, memcpy in msvcrt.dll), be careful since most of x86/x64 intrinsic functions are not compatible & will cause error in compiling the converted shellcode project.
 
 Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86, x64 & arm64 shellcode files using Visual Studio 2026 @ ARM64<br />
 [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2026ARM64.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2026ARM64.mp4)
