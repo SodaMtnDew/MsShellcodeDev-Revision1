@@ -75,7 +75,7 @@ P.S. For C2 in PoC, Remember to Set Firewall Rules for C2 Host ...
 # List of Demonstration (Wait for New Videos & Snapshots to be done)
 1. Executing Patched Poison Ivy 2.3.2 Shellcode on Windows 11 26H2@Arm64, C2 Listening on Port 3460 at Windows Server 2025 Standard Version, Just to Mention How MsShellcodeDev-Rev1 Emerged as an Open Source Project (From What I Learned in Patching Poison Ivy RAT)<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/PatchedPI232@Win11.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/PatchedPI232@Win11.mp4)
-2. Executing GetSysInfo (Compiled from ShellcodeSample of main solution) all versions - x86/x64/arm64 - on Windows 11/10/7/XP/2000 & Windows Server, including Domain Center<br />
+2. Executing GetSysInfo (Compiled from ShellcodeSample of main solution) all versions - x86/x64/arm64 - on Windows 2000/XP/7/10/11/11Arm64, Server 2022, & Server 2025 as Domain Center<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/GetSysInfo@Windows.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GetSysInfo@Windows.mp4)
 3. Building PoC_Reconnaissance, Compiling ReconAgent as Shellcode & Executing It on Windows XP, Windows 7, Windows 10 CMGE, Windows 11 26H1 zhTW, Windows 11 26H1 enUS, & Windows 11 26H1@Arm64, with different office version & PDF viewers installed.<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ReconAgents2ReconCommand.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ReconAgents2ReconCommand.mp4)
