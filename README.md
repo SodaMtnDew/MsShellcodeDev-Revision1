@@ -10,7 +10,7 @@ Main part: MsShellcodeDev-Rev1 -- Visual Studio 2026 is the recommended IDE to c
 For those having legitimate license of any of those IDEs mentioned, I recommended not installing the community version because people prefer to develop "shellcode" offline; for those having no license, using community version has no problem, I guess most of you know how to protect your source codes & PE files built.
 
 Demonstration Video showing the building & execution of all projects of MsShellcodeDev-Rev1 using Visual Studio 2026 on Windows 11 as Guest OS of VMware Fusion on MacBoook Air ("ShellcodePrototype" & "ShellcodeSample" included)<br />
-[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/MsShellcodeDev-Built@VS2026.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/MsShellcodeDev-Built@VS2026.mp4)
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/MsShellcodeDev-Built@VS2026.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/MsShellcodeDev-Built@VS2026.mp4)
 
 Additional tool
 
