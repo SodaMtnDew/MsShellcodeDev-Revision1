@@ -79,5 +79,5 @@ P.S. For C2 in PoC, Remember to Set Firewall Rules for C2 Host ...
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/GetSysInfo@Windows.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GetSysInfo@Windows.mp4)
 3. Building PoC_Reconnaissance, Compiling ReconAgent as Shellcode & Executing It on Windows XP, Windows 7, Windows 10 CMGE, Windows 11 26H1 zhTW, Windows 11 26H1 enUS, & Windows 11 26H1@Arm64, with different office version & PDF viewers installed.<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ReconAgents2ReconCommand.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ReconAgents2ReconCommand.mp4)
-4. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode & Executing It on Windows 11 26H2@Arm64, showing that License.ini & USB thumb drive should be paired to make the license valid.<br />
+4. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode & Executing It on Windows 11, showing that License.ini & USB thumb drive should be paired to make the license valid.<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/CheckLicense@USB.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/CheckLicense@USB.mp4)
