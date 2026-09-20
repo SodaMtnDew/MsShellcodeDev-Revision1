@@ -19,36 +19,36 @@ ShellcodeTestLoader -- To provide x86, x64 & arm64 shellcode loader exe to help 
 Part 1: ShellcodeTestLoader.ARM64 -- The "ShellcodeTestLoader.ARM64" could only be built using Visual Studio 2019 or newer IDEs, since no XP or lower version OS compatibility consideration, and using v141 platform toolset will lead to linking error beacuse of SDK imcompatibility. In this demonstration only the building process will be shown, no execution of EXE because OS architecture not compatible.
 
 Demonstration Video showing project "ShellcodeTestLoader.ARM64" built using Visual Studio 2019
-[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ShellcodeTestLoader.ARM64-Built@VS2019.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ShellcodeTestLoader.ARM64-Built@VS2019.mp4)
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/ShellcodeTestLoader.ARM64-Built@VS2019.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/ShellcodeTestLoader.ARM64-Built@VS2019.mp4)
 
 Part 2: ShellcodeTestLoader.x64 -- The "ShellcodeTestLoader.x64" should be built with v140xp (though Unsupported now) or v141xp toolsets (though deprecated) since Windows XP & Server 2003 already provided x64 version, when installling the MS IDEs, be careful to install the toolsets as individual components so the generated shellcode could use the loader to test. Beware that Visual Studio 2026 and Visual Studio 2022 on Arm64 already removed that feature, so remember to keep your copy of Visual Studio 2015 iso images well since no one knows when they will be unavailbale. (Visual Studio 2017 could only be installed online so we have no way to save it as a "small" enough iso image)
 
 Demonstration Video showing project "ShellcodeTestLoader.x64" built using Visual Studio 2017
-[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ShellcodeTestLoader.x64-Built@VS2017.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ShellcodeTestLoader.x64-Built@VS2017.mp4)
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/ShellcodeTestLoader.x64-Built@VS2017.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/ShellcodeTestLoader.x64-Built@VS2017.mp4)
 
 Part 3: ShellcodeTestLoader.x86 -- The "ShellcodeTestLoader.x86" should be built using Visual Studio 2008 Express with SP1 since windows 2000 compatibility is considered. VS2008 is the last version supporting Windows 2000. Although it's also the first or second version supporting x64, the free "Visual Studio 2008 Express" version did not have a built-in x64 compiler (but not a problem since Windows 2000 did not have x64 version). Beware to keep your copy of Visual Studio 2008 iso images well since no one knows when they will be unavailbale.
 
 Demonstration Video showing project "ShellcodeTestLoader.x86" built using Visual Studio 2008 Express<br />
-[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ShellcodeTestLoader.x86-Built@VS2008Express.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ShellcodeTestLoader.x86-Built@VS2008Express.mp4)
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/ShellcodeTestLoader.x86-Built@VS2008Express.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/ShellcodeTestLoader.x86-Built@VS2008Express.mp4)
 
 # Requirements - To Build the Shellcode
 To execute "Vcxproj to Shellcode Compiler" to convert & compile the vcxproj to shellcode, Windows 10 & Visual Studio 2019 (or higher version OSes/IDEs) are required, so the Software/Hardwre requirements just same as Win 10 & VS 2019. The converted project should be developed using pure C & win32/win64 APIs without class & global variable definitions. And for new finding, and switch/case statement will also generate position dependent code so could not be used.
 For those advanced developers familiar with using intrinsic functions (since __stosb, __movsb, etc. are more efficient than memset, memcpy in msvcrt.dll), be careful since most of x86/x64 intrinsic functions are not compatible & will cause error in compiling the converted shellcode project.
 
 Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86, x64 & arm64 shellcode files using Visual Studio 2026 @ ARM64<br />
-[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2026ARM64.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2026ARM64.mp4)
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/Compiler@VS2026ARM64.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/GenerateShellcode@VS2026ARM64.mp4)
 
 Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86, x64 & arm64  shellcode files using Visual Studio 2022 @ ARM64<br />
-[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2022ARM64.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2022ARM64.mp4)
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/Compiler@VS2022ARM64.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/GenerateShellcode@VS2022ARM64.mp4)
 
 Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86, x64 & arm64 shellcode files using Visual Studio 2026 @ x64<br />
-[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2026x64.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2026x64.mp4)
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/Compiler@VS2026x64.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/GenerateShellcode@VS2026x64.mp4)
 
 Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86, x64 & arm64 shellcode files using Visual Studio 2022 @ x64<br />
-[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2022x64.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2022x64.mp4)
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/Compiler@VS2022x64.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/GenerateShellcode@VS2022x64.mp4)
 
 Demonstration Video showing the result of executing "VcxprojToShellcodeCompiler" and load "ShellcodeSample" to generate x86, x64 * arm64 shellcode files using Visual Studio 2019<br />
-[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/Compiler@VS2019x64.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GenerateShellcode@VS2019x64.mp4)
+[![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/Compiler@VS2019x64.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/GenerateShellcode@VS2019x64.mp4)
 
 # Usage
 Both "ShellcodePrototype" & "ShellcodeSample" are programs could be compiled & executed, the outcome are "run calc.exe & pop MessageBox" and "get system info & pop MessageBox;" "Hash of Func & LibName Calculator" could be used to pick existing dll file & export hash values of DLL file name (including file extension, case-insensitive) & API names (case-sensitive) then save the outcome into assigned csv file path; "ShellcodeTestLoader" is the tool to test extracted binary shellcode files using VirtualAlloc API, just be careful that x86/x64/arm64 build of loader could only test corresponding shellcode; "Vcxproj to Shellcode Compiler" is GUI application, since the IDE version & "vcvars32.bat" path could be automatically detected, just pick the vcxproj & assign the output name (or not, in this case the name of the converted project will be used) & click on the "Compile" button, the outcome will be there, 2 binary files with "successfully generated" message (as rusult shown in demonstration video) or "one of many different error messages." The folder "PicProj" will not be deleted for checking the real error messages generated by VC compiler of MsDev, just open terminal, move to the PicProj folder & execute "VcxBuild.bat" to see what's wrong. Please be noticed that the "ShellcodeSample" might have newer versions uploaded, please keep following this repository.
@@ -74,10 +74,10 @@ P.S. For C2 in PoC, Remember to Set Firewall Rules for C2 Host ...
 
 # List of Demonstration (Wait for New Videos & Snapshots to be done)
 1. Executing Patched Poison Ivy 2.3.2 Shellcode on Windows 11 26H2@Arm64, C2 Listening on Port 3460 at Windows Server 2025 Standard Version, Just to Mention How MsShellcodeDev-Rev1 Emerged as an Open Source Project (From What I Learned in Patching Poison Ivy RAT)<br />
-   [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/PatchedPI232@Win11.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/PatchedPI232@Win11.mp4)
+   [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/PatchedPI232@Win11.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/PatchedPI232@Win11.mp4)
 2. Executing GetSysInfo (Compiled from ShellcodeSample of main solution) all versions - x86/x64/arm64 - on Windows 2000/XP/7/10/11/11Arm64, Server 2022, & Server 2025 as Domain Center<br />
-   [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/GetSysInfo@Windows.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/GetSysInfo@Windows.mp4)
+   [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/GetSysInfo@Windows.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/GetSysInfo@Windows.mp4)
 3. Building PoC_Reconnaissance & Compiling ReconAgent as Shellcode on Visual Studio 2026 @ ARM64; Executing It on Windows XP, Windows 7, Windows 10 CMGE, Windows 11 26H1 zhTW, Windows 11 26H1 enUS, & Windows 11 26H1@Arm64, with different office version & PDF viewers installed.<br />
-   [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/ReconAgents2ReconCommand.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/ReconAgents2ReconCommand.mp4)
+   [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/ReconAgents2ReconCommand.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/ReconAgents2ReconCommand.mp4)
 4. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode  on Visual Studio 2026 @ x64; Executing It on Windows 11, showing that License.ini & USB thumb drive should be paired to make the license valid.<br />
-   [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/images/CheckLicense@USB.png)](https://github.com/SodaMtnDew/MsShellcodeDev/blob/main/videos/CheckLicense@USB.mp4)
+   [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/CheckLicense@USB.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/CheckLicense@USB.mp4)
