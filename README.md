@@ -2,7 +2,7 @@
 
 The tools that could help turning C programmers to Shellcode developers. To testing all programs of MsShellcodeDev-Revision1, Visual Studio 2026 on Windows 11 Arm64 is recommeded since on WoA, all x86, x64 & arm64 PE files could be executed. For testing all generated shellcode files & the compatibilities on all nt-based windows, please use VMware Workstation on Windows/Linux Platform & VMware Fusion on macOS & install all needed guest OS to test. The demonstration video files in this repository are all recorded as VMware guest OS.
 
-For demonstration video, plesae click on the snapshot image & download the MP4 to play.
+For demonstration video files, plesae click on the snapshot images & download the MP4s to play, since could not be previewed on GitHub & downloading is the only option.
 
 # Requirements - To Build the Solution
 Main part: MsShellcodeDev-Rev1 -- Visual Studio 2026 is the recommended IDE to compile the solution, however, for those still prefer old MS IDEs such as Visual Studio 2019 & 2022, sln also provided for those IDEs, just remember to modify project settings such as platform toolset & SDK version provided by your IDE. However, since "Revision 1" added ARM64 (Apple Silicon, Snapdragon, etc.) support in generating shellcode, Visual Studio 2015 & older IDEs could not be used to build projects in the main solution file. In addition, although VS2017 officially supported ARM64 after 17.5.8, but the binding SDK not compatible and will cause some unpredictable error messages when compiling ARM64 exe, VS2017 is also not allowed for MsShellcodeDev-Rev building & shellcode generating.
