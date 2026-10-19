@@ -85,5 +85,5 @@ P.S. For C2 in PoC, Remember to Set Firewall Rules for C2 Host ...
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/CheckLicense@USB.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/CheckLicense@USB.mp4)
 
 # Patched/Updated History (Since 19th of October, 2026)
-   Patched: 2 or more comments in "\/\*\/DLLName.dll\[#Ordinal\]\/\*\/" form for api conversion could be in the same line now (older version could cause conversion error) @ 19th Oct, 2026<br />
-   Patched: Specific API name that has Substring also API name could be converted now (older version could cause conversion error) @ 19th Oct, 2026
+   Patched: 2 or more comments in "\/\*\/DLLName.dll\[#Ordinal\]\/\*\/" form for api conversion could be in the same line now (older version could cause conversion error) <br />&emsp;@ 19th Oct, 2026<br />
+   Patched: Specific API name that has Substring also API name could be converted now (older version could cause conversion error) <br />&emsp;@ 19th Oct, 2026
