@@ -83,3 +83,7 @@ P.S. For C2 in PoC, Remember to Set Firewall Rules for C2 Host ...
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/ReconAgents2ReconCommand.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/ReconAgents2ReconCommand.mp4)
 4. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode  on Visual Studio 2026 @ ARM64; Executing It on Windows 11, showing that License.ini & USB thumb drive should be paired to make the license valid on the one & invalid on another.<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/CheckLicense@USB.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/CheckLicense@USB.mp4)
+
+# Patched/Updated History (Since 19th of October, 2026)
+   Patched: 2 or more comments in "\/\*\/DLLName.dll\[#Ordinal\]\/\*\/" form for api conversion could be in the same line now (older version could cause conversion error) @ 19th Oct, 2026
+   Patched: Specific API name that has Substring also API name could be converted now (older version could cause conversion error) @ 19th Oct, 2026
