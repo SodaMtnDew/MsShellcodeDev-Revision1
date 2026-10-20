@@ -70,7 +70,7 @@ PoC Part 2: PoC_Reconnaissance -- Evolved from "GetSysInfo" PoC, the "ReconComma
 
 PoC Part 3: PoC_Licensing@USB -- Shellcode could also be used for non-malicious purpose, and this is one example. In Poc_Licensing@USB, "GenerateLicenseAtUSB" could generate file "License.ini" and save it in the root directory of the selected thumb drive. The key in the License file is generated using HMAC_SHA512 (Key length=128 bytes, 2nd half is generated using SHA512 output of iSerialNumber of "that" thumb drive) and Username given in the same license file. Use generated "CheckLicense" shellcose could test if the license valid. Since iSerialNumber is the key factor, the License.ini generated & tested valid on thumb drive 1 will not be valid if just copied to thumb drive 2 (all versions tested).
 
-PoC Part 4: PoC_Ransomware -- Shellcode acquires public key generated on request from the given C2 (website: Apache24 + PHP8 + OpenSSL, corresponding private key saved on C2) and encrypts txt & pdf in the "Desktop" folder (subdirectory not included for this is just a PoC) of the Victim OS; encrypted files could use decryptor & saved private key on C2 to decrypt. (Under development, simplified C2 that generate RSA 4096 key pair will be provided; Ransomeware source code not.)
+PoC Part 4: PoC_Ransomware -- Shellcode acquires public key generated on request from the given C2 (website: Apache24 + PHP8 + OpenSSL, corresponding private key saved on C2) and encrypts txt & pdf in the "Desktop" folder (subdirectory not included for this is just a PoC) of the Victim OS; encrypted files could use decryptor & saved private key on C2 to decrypt. (Simplified C2 that generate RSA 4096 key pair provided as htdocs\openssl.php)
 
 P.S. For C2 in PoC, Remember to Set Firewall Rules for C2 Host ...
 
@@ -81,8 +81,11 @@ P.S. For C2 in PoC, Remember to Set Firewall Rules for C2 Host ...
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/GetSysInfo@Windows.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/GetSysInfo@Windows.mp4)
 3. Building PoC_Reconnaissance & Compiling ReconAgent as Shellcode on Visual Studio 2026 @ ARM64; Executing It on Windows XP, Windows 7, Windows 10 CMGE, Windows 11 26H1 zhTW, Windows 11 26H1 enUS, & Windows 11 26H1@Arm64, with different office version & PDF viewers installed.<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/ReconAgents2ReconCommand.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/ReconAgents2ReconCommand.mp4)
-4. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode  on Visual Studio 2026 @ ARM64; Executing It on Windows 11, showing that License.ini & USB thumb drive should be paired to make the license valid on the one & invalid on another.<br />
+4. Building PoC_Licensing@USB, Compiling CheckLicense as Shellcode on Visual Studio 2026 @ ARM64; Executing It on Windows 11, showing that License.ini & USB thumb drive should be paired to make the license valid on the one & invalid on another.<br />
    [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/CheckLicense@USB.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/CheckLicense@USB.mp4)
+5. Building PoC_Ransomware, Compiling FilesEncrypter as Shellcode on Visual Studio 2026 @ AMD64; Executing It on Windows 11, encrypting then deleting all PDF & TXT files in the "Desktop" folder of current user; Excuting Compiled "FilesDecrypter.exe" & Download Private Key from C2 to decrypt those PDF & TXT files.<br />
+   [![Watch the video](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/images/PoC_Ransomware.png)](https://github.com/SodaMtnDew/MsShellcodeDev-Revision1/blob/main/videos/PoC_Ransomware.mp4)
+
 
 # Patched/Updated History (Since 19th of October, 2026)
    Patched: 2 or more comments in "\/\*\/DLLName.dll\[#Ordinal\]\/\*\/" form for api conversion could be in the same line now (older version could cause conversion error) <br />&emsp;@ 19th Oct, 2026<br />
